@@ -1,0 +1,16 @@
+1) Finish User Model
+	secure passwords
+	sign in/out
+	sessions
+
+2) Display correct page per user
+
+3) Create Team model
+	has players
+	region
+
+4) Create Player model
+	has official team
+	points
+	stats
+
