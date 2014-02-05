@@ -1,0 +1,14 @@
+<h1>Create A New Team</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @user_team do |f| %>
+    	<%= render 'shared/team_error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Create My Team", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
