@@ -1,0 +1,33 @@
+<% @players = Player.find(:all, :order => 'team') %>
+
+<h1>Add A New Player</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @user_player do |f| %>
+      <%= render 'shared/user_player_error_messages' %>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Team</th>
+          <th>Role</th>
+          <th>Select</th>
+        </tr>
+ 
+        <% @players.each do |player| %>
+          <tr>
+            <td><%= link_to player.name, player_path(player) %></td>
+            <td><%= player.team %></td>
+            <td><%= player.role %></td>
+            <td><%= check_box_tag(:user_player) %></td>
+            <td><%= label_tag(:user_player, "Add Player") %></td>
+          </tr>
+        <% end %>
+      </table>
+
+      <%= f.submit "Add Player", class: "btn btn-large btn-primary" %>
+
+    <% end %>
+  </div>
+</div>

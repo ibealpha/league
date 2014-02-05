@@ -1,0 +1,20 @@
+<h1>New Player</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @player do |f| %>
+    	<%= render 'shared/player_error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :team %>
+      <%= f.text_field :team %>
+
+      <%= f.label :role %>
+      <%= f.text_field :role %>
+
+      <%= f.submit "Add Player", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
